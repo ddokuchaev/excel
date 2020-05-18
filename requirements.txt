@@ -1,0 +1,15 @@
+Webpack
+  Babel - for old version browsers
+  Scss - CSS preprocessor
+  Eslint - code clear
+  2 Modes
+    - Dev - Dev server, SourceMap, Eslint, Not Minified JS & CSS
+    - Prod - Minified code JS & CSS
+Git
+  Production
+    1.0.0
+    0---------
+  Development
+    1.0.2
+    1------------ + -- (PR+) Pool Request => --------------
+    2-------------- | (Delete)
