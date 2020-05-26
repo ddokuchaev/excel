@@ -1,17 +1,17 @@
 const CODES = { A: 65, Z: 90 }
 
-function toColumn(col) {
+function toColumn(col, index) {
   return `
-  <div class="column">
+  <div class="column" data-type="resizable" data-col="${index}"> 
     ${col}
     <div class="col-resize" data-resize="col"></div>
   </div>
   `
 }
 
-function toCell(cell) {
+function toCell(cell, index) {
   return `
-  <div class="cell" contenteditable>${cell}</div>
+  <div class="cell" data-col="${index}" contenteditable>${cell}</div>
   `
 }
 
@@ -20,7 +20,7 @@ function createRow(index, content) {
     ? '<div class="row-resize" data-resize="row"></div>'
     : ''
   return `
-  <div class="row">
+  <div class="row" data-type="resizable">
     <div class="row-info">
       ${index ? index : ''}
       ${resizer}
