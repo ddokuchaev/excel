@@ -22,3 +22,24 @@ export function matrix($current, $target) {
     return acc
   }, [])
 }
+
+export function nextSelected(key, { row, col }) {
+  /* eslint indent: ["error", 2, { "SwitchCase": 1 }] */
+  switch (key) {
+    case 'ArrowRight':
+    case 'Tab':
+      col++
+      break
+    case 'ArrowDown':
+    case 'Enter':
+      row++
+      break
+    case 'ArrowLeft':
+      if (!col < 1) col--
+      break
+    case 'ArrowUp':
+      if (!row < 1) row--
+  }
+
+  return `[data-id="${row}:${col}"]`
+}
