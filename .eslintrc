@@ -14,7 +14,8 @@
     "indent": ["error", 2],
     "operator-linebreak": "off",
     "prefer-const": "off",
-    "no-prototype-builtins":"off"
+    "no-prototype-builtins": "off",
+    "switch-colon-spacing": "off"
   },
   "extends": ["eslint:recommended", "google"]
 }
